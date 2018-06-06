@@ -1,0 +1,144 @@
+.btn-area-container{
+  background: #455565;
+  display: block;
+  padding: 0px 0px;
+}
+
+
+.btn-area{
+  padding: 0px 0;
+}
+
+.btn-area .add{
+  margin: 0px 0px;
+  display: inline-block;
+  float: left;
+  width: 10%;
+
+}
+
+.background{
+
+  background: #455565;
+  height: 250px;
+}
+
+.center{
+
+}
+.mw2-l{
+  width: 50%;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float:right;
+}
+.clearf:after,
+.clearf:before{
+content:"";
+display: block;
+clear: both;
+}
+.btn-area{
+  background-color: #f5f5f5;
+}
+
+/* .btn-one{
+  float: left;
+} */
+
+.index-panel{
+    margin-top: 80px;
+}
+
+.index-panel-header{
+
+}
+
+.index-panel-header h3 {
+
+    font-weight: normal;
+    float:left;
+
+
+}
+
+.index-panel-header p{
+    margin-left: 50px;
+}
+
+.index-panel-body{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.box{
+  height: 450px;
+  width: 100%;
+  min-width: 330px;
+  background: #ccc;
+  margin:5% 0;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+  box-shadow: 0 2px 2px rgba(0,0,0,.1);
+}
+
+.side-bar {
+  float: left;
+  width: 15%;
+  position: fixed;
+  margin: 10% 1%;
+}
+
+.box-header{
+  background-color: #fff;
+}
+
+@media(max-width: 480px){
+  .fix{
+    position: fixed;
+    left: 16%;
+    top: 25%;
+    width:66%;
+  }
+}
+@media(min-width: 480px){
+  .fix{
+    position: fixed;
+    left: 33%;
+    top: 25%;
+    width:33%;
+  }
+}
+.add{
+  padding:30% 30%;
+}
+
+.btn-add{
+
+}
+header .container{
+  margin-top: 10%;
+}
+
+#chart1D,
+#chart1W,
+#chart1M{
+  position: relative;
+  top:0%;
+  width: 100%;
+  height: 80%;
+}
+.container li{
+  list-style: none;
+}
+.mybtn{
+  color: white;
+  background: #72bf44;
+  border-radius: 6px;
+}
+.myhide{
+  display: none;
+}

@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="desktop-menu-open" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>index_admin</title>
+    <!-- meta name="description" content="Description of the page less than 150 characters" --> <!-- meta description-->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i">
+    <link rel="stylesheet" href="https://basecoat.cdn.dimensiondata.com/2.0.0/css/dd.basecoat.min.css">
+    <link rel="stylesheet" href="static/app/content/nav.css" >
+   <!-- main -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="static/app/scripts/dd.basecoat.js" ></script>
+    <script defer src="static/app/scripts/outdated-browser.js"></script>
+    <!-- chart -->
+
+
+    <script src="static/app/scripts/charts.js"></script>
+    <script src="static/app/scripts/functions.js"></script>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+    <script src="static/app/scripts/echarts.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+    <div class="sticky-footer-layout desktop-menu-layout mobile-menu-layout">
+      <!-- Site header -->
+      <header class="site-header">
+        <nav class="navbar navbar-fixed-top">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <a class="horizontal-logo" href="login.html" title="Return home">
+                <div class="logo-image" title="Dimension Data"></div>
+                <div class="logo-title"><span>1ws<br>ITservices</span></div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown hidden-mobile">
+                <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                <span class="fa fa-user"></span> {{ email }} <span class="caret"></span>
+                </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">My account</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url 'login' %}">Sign out</a></li>
+              </ul>
+            </li>
+            <!--li class="mobile-menu-toggle hidden-desktop" data-toggle="mobile-menu" title="Mobile menu">
+              <button type="button" class="navbar-btn btn"><i aria-hidden="true" class="fa fa-bars"></i></button>
+            </li-->
+
+             <li id="setting-top" class="fr hidden-desktop">
+              <button type="button" class="btn btn-block btn-primary"><span class="fa fa-gear"></span></button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="col-xs-2 side-bar top-gutter hidden-mobile">
+        <h1>1ws</h1>
+        <h2>IT services</h2>
+      </div>
+
+      <!-- Page content -->
+      <main class="page-wrapper top-gutter container">
+        <!-- header datepicker -->
+        <header class="top-gutter">
+          <ul class="container">
+            <li id="setting" class="fr">
+              <button type="button" class="btn btn-block btn-primary"><span class="fa fa-gear"></span>settings</button>
+            </li>
+          </ul>
+        </header>
+        <!-- boxes -->
+        <div class="container bottom-gutter btn-area">
+
+          <!-- box-add -->
+          <div class="col-sm-6 col-xs-12 myhide">
+            <div id="box-add" class="box">
+              <div class="col-xs-12 col-sm-6 col-lg-3 bottom-gutter add">
+                <!-- <button type="button" class="box-add btn btn-primary">Add new chart</button> -->
+                <!-- modal trigger -->
+                <button type="button" class=" mybtn btn btn-primary" data-toggle="modal" data-target="#simpleDialogExample">
+                  add new modules
+                </button>
+
+                <!-- modal code should be placed just before your closing </body> tag -->
+                <div class="modal fade" tabindex="-1" role="dialog" id="simpleDialogExample">
+                  <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Select backup server</h5>
+                      </div>
+                      <div class="modal-body">
+                        <ul class="btn-list">
+                          <li>
+                            <a href="#" data-dismiss="modal">
+                              <span class="fa fa-server"></span>chart1
+                              <button id="add1" class="btn-add fr">add</button>
+                            </a>
+
+                          </li>
+                          <li>
+                            <a href="#" data-dismiss="modal">
+                              <span class="fa fa-server"></span>chart2
+                              <button id="add2" class="btn-add   fr">add</button>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" data-dismiss="modal">
+                              <span class="fa fa-server"></span>chart3
+                              <button id="add3" class="btn-add   fr">add</button>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <!-- use the .btn-link-toolbar for the correct padding if the footer only contains link buttons -->
+                        <div class="btn-link-toolbar">
+                          <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- box Q&A -->
+          <div class="col-sm-6 col-xs-12">
+            <div class="box">
+              <a href="{% url 'faqpage' %}" type="button" class="btn btn-primary">Q&A</a>
+            </div>
+          </div>
+
+          <!-- new box -->
+          <!-- <div class='col-sm-6 col-xs-12'>
+            <div class='box box3'>
+              <div class='box-header clearf'>
+                <div class='title col-xs-3'>title</div>
+                <ul class='fr'>
+                  <a href='#' class='col-xs-1 changeCol'>
+                    <span class='fa fa-pencil'></span>
+                  </a>
+                  <a href='#' class='col-xs-1 move'>
+                    <span class='fa fa-th-large'></span>
+                  </a>
+                  <a href='#' class='col-xs-1 trash trash1'>
+                    <span class='fa fa-trash'></span>
+                  </a>
+                </ul>
+              </div>
+              <div class='clearf'>
+                <li class='col-xs-3'>
+                  <div class='heading'>Choose date</div>
+                </li><li class='col-xs-4'>
+                  <div class='form-group has-icon'>
+                    <input type='month' name='' value=''></div>
+                  </li>
+                </div>
+              </div>
+            </div> -->
+        </div>
+
+      </main>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="footer-copyright">&copy; Copyright 2017. Dimension Data.</p>
+            <ul class="list-inline footer-links">
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Cookie policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Mobile menu -->
+      <!-- <div class="mobile-menu">
+        <div class="content">
+          <div class="scrollbars scrollbars-light">
+            <nav class="drilldown">
+              <ul class="nav">
+                <li class="menu-header">
+                  <div class="horizontal-logo" data-toggle="mobile-menu" title="Mobile menu">
+                    <div class="logo-image" title="Dimension Data"></div>
+                    <div class="logo-title"><span>living<br>styleguide</span></div>
+                  </div>
+                </li>
+                <li><a href="../html/homepage222.html">Home</a></li>
+                <li>
+                  <a href="../html/personal-profile.html">Printer services usage</a>
+                </li>
+                <li>
+                  <a href="../html/meetingRoom.html">Meeting room usage</a>
+                </li>
+                <li>
+                  <a href="../html/printer-services.html">Printer services usage</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
+
+
+
+

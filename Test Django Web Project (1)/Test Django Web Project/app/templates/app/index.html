@@ -1,0 +1,251 @@
+{% extends "app/layout.html" %}
+
+
+
+{% block header %}
+<link rel="stylesheet" href="https://basecoat.dimensiondata.com/examples/css/dashboard.css">
+{% endblock %}
+
+{% block pagecontent %}
+    <div class="container-xl">
+            <div class="col-xs-12">
+
+              <div class="pull-left">
+                <h1 class="main-heading">{{ email }}</h1>
+                <h2 class="sub-heading"> {{ isAdmin }}</h2>
+              </div>
+
+              <div class="pull-right">
+                <button type="submit" class="btn btn-icon-text btn-primary"><span class="fa fa-plus"></span> Add server</button>
+              </div>
+
+              <img src="https://basecoat.dimensiondata.com/examples/img/dd-graph.svg" class="top-gutter bottom-gutter" />
+
+            </div>
+          </div>
+
+    <div class="nav-tabs-responsive scrollbars">
+          <ul class="nav nav-tabs nav-centered" data-footer-tabs>
+            <li class="active"><a data-toggle="tab" href="#tab1">Today</a></li>
+            <li><a data-toggle="tab" href="#tab2">Tomorrow</a></li>
+            <li><a data-toggle="tab" href="#tab1">This week</a></li>
+            <li><a data-toggle="tab" href="#tab2">This month</a></li>
+            <li class="disabled"><a data-toggle="tab" href="#tab1">SLA Targets</a></li>
+          </ul>
+        </div>
+
+    <div class="tab-content footer-tab-area">
+
+          <div id="tab1" class="tab-pane fade in active">
+            <div class="container-xl">
+              <div class="row">
+
+                <div class="col-xs-12 col-lg-9">
+
+                  <h3 class="accent-heading pull-left">Targets per customer</h3>
+
+                  <span class="status-indicators">
+                    <span class="status-dot status-ontime"></span> On time
+                    <span class="status-dot status-missed"></span> Missed
+                  </span>
+
+                  <div class="table-responsive scrollbars">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Name</th>
+                          <th>Category</th>
+                          <th>Location</th>
+                          <th>Created by</th>
+                          <th>Tickets</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="https://basecoat.dimensiondata.com/examples/img/dd-art-1.svg"/></td>
+                          <td>Lorem ipsum dolor</td>
+                          <td>Servers</td>
+                          <td>ZA/Cape Town</td>
+                          <td>Noel Gallagher</td>
+                          <td>1234</td>
+                          <td><button class="btn btn-icon btn-link" data-actions-popover><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><img src="https://basecoat.dimensiondata.com/examples/img/dd-art-2.svg"/></td>
+                          <td>Lorem ipsum dolor</td>
+                          <td>Lorem ipsum</td>
+                          <td>1234</td>
+                          <td>$ 1,177.60</td>
+                          <td>$ 1,017.48</td>
+                          <td><button class="btn btn-icon btn-link" data-actions-popover><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><img src="https://basecoat.dimensiondata.com/examples/img/dd-art-3.svg"/></td>
+                          <td>Lorem ipsum dolor</td>
+                          <td>Lorem ipsum</td>
+                          <td>1234</td>
+                          <td>$ 1,177.60</td>
+                          <td>$ 1,017.48</td>
+                          <td><button class="btn btn-icon btn-link" data-actions-popover><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-lg-3">
+                  <h3 class="accent-heading">Recommendations</h3>
+                  <div class="panel-group" id="accordion1">
+                    <div class="panel">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
+                        <h4 class="panel-title">Immediate</h4>
+                      </div>
+                      <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <ul>
+                            <li>Lorem ipsum dolor</li>
+                            <li>Lorem ipsum dolor</li>
+                            <li>Lorem ipsum dolor</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
+                        <h4 class="panel-title">Short term</h4>
+                      </div>
+                      <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <ul class="btn-list no-margin">
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse3">
+                        <h4 class="panel-title">Long term</h4>
+                      </div>
+                      <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p class="no-margin">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div id="tab2" class="tab-pane fade">
+            <div class="container-xl">
+              <div class="row">
+
+                <div class="col-xs-12 col-lg-9">
+                  <h3 class="accent-heading pull-left">Targets per customer</h3>
+
+                  <span class="status-indicators">
+                    <span class="status-dot status-ontime"></span> On time
+                    <span class="status-dot status-missed"></span> Missed
+                  </span>
+
+                  <div class="table-responsive scrollbars">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Name</th>
+                          <th>Category</th>
+                          <th>Location</th>
+                          <th>Created by</th>
+                          <th>Tickets</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><img src="img/dd-art-1.svg"/></td>
+                          <td>Lorem ipsum dolor</td>
+                          <td>Servers</td>
+                          <td>ZA/Cape Town</td>
+                          <td>Noel Gallagher</td>
+                          <td>1234</td>
+                          <td><button class="btn btn-icon btn-link" data-actions-popover><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><img src="img/dd-art-2.svg"/></td>
+                          <td>Lorem ipsum dolor</td>
+                          <td>Lorem ipsum</td>
+                          <td>1234</td>
+                          <td>$ 1,177.60</td>
+                          <td>$ 1,017.48</td>
+                          <td><button class="btn btn-icon btn-link" data-actions-popover><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><img src="img/dd-art-3.svg"/></td>
+                          <td>Lorem ipsum dolor</td>
+                          <td>Lorem ipsum</td>
+                          <td>1234</td>
+                          <td>$ 1,177.60</td>
+                          <td>$ 1,017.48</td>
+                          <td><button class="btn btn-icon btn-link" data-actions-popover><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-lg-3">
+                  <h3 class="accent-heading">Recommendations</h3>
+                  <div class="panel-group" id="accordion2">
+                    <div class="panel">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+                        <h4 class="panel-title">Immediate</h4>
+                      </div>
+                      <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
+                        <h4 class="panel-title">Short term</h4>
+                      </div>
+                      <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p class="no-margin">Incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel">
+                      <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+                        <h4 class="panel-title">Long term</h4>
+                      </div>
+                      <div id="collapse6" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p class="no-margin">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+{% endblock %}
+
+{% block footer %}
+<p>test unique page footer content</p>
+{% endblock %}
